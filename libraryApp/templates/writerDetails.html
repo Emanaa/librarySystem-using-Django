@@ -1,14 +1,15 @@
 
 <h2>Writer details</h2>
-<h3>{{details.first_name}} {{details.last_name}}</h3>
+<h3>{{writerDetails.writer_name}}</h3>
 <ul>
-    <li>Born at {{details.date_of_birth}}</li>
-    <li>Died at {{details.date_of_death}}</li>
-    <li>Contact {{details.contact}}</li>
-    <li>Books <a href="{{details.books}}">{{details.books}}</a> </li>
-    <li>Bio {{details.bio}}</li>
- 
-    <img  width=200 height=200 src='/{{details.bio}}' alt="My image"/>
-   
-</ul>
+    <li>Image {{details.writer_image}}</li>
+    <img  width=200 height=200 src='/{{details.writer_image}}' alt="My image"/>
+    <li>Born at {{details.writer_dob}}</li>
+    <li>Died at {{details.writer_dod}}</li>
+    <li>Contact {{details.writer_contact}}</li>
+    {% for book in details.book_set.all%}
+    <li>Books <a href="{{}}">{{book.book_name}}</a> </li>
+    {%endfor%}
+    <li>Bio {{details.writer_bio}}</li>
 
+</ul>
