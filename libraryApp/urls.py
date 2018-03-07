@@ -5,5 +5,6 @@ app_name = 'libraryApp'
 
 urlpatterns = [
 	path('',views.listWriters,name='writers'),
+    path('d/<int:writer_id>',views.writerDetails,name='detail'),
 
 ]
