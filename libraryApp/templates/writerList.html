@@ -1,0 +1,7 @@
+<h2>Writers</h2>
+<ul>
+    {% for writer in writer_list %}
+
+        <li><a href="d/{{writer.id}}">{{ writer.first_name }}</a></li>
+    {% endfor %}
+</ul>
