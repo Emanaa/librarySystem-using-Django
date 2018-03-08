@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
+{% extends 'base.css' %}
 
 {% block content %}
+<body>
   <h2>Sign up</h2>
+  <div class="container">
   <form method="post">
     {% csrf_token %}
     {% for field in form %}
@@ -18,4 +21,6 @@
     {% endfor %}
     <button type="submit">Sign up</button>
   </form>
+      </div>
+</body>
 {% endblock %}
