@@ -1,8 +1,9 @@
-
 body {
    background-image: url("../images/1.jpg");
-   background-size:cover;
+background-size:cover;
+
 }
+
 
 div {
     width: 400px;
@@ -58,4 +59,3 @@ button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
