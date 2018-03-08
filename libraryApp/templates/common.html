@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Library</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="{%static "css/style.css"%}">
+<style>
+
+#details
+{
+    position: absolute;
+    top:300px;
+  
+    
+}
+#dDiv{
+  margin-left: 300px;
+}
+#spanDetails{
+  padding-left: 20px;
+  width:300px;
+}
+
+</style>
+</head>
+<body>
+<div id="header">
+  
+  <div class="section"> <span id="ribbon"></span> <span id="button"></span>
+    
+    <div>
+      <div id="logo"><a href=""><img id="logoimg" src="{%static "images/logo.png"%}" alt=""></a></div>
+      <div id="navigation">
+        <ul class="primary">
+          <li class="current"><a href="">Home</a></li>
+          <li><a href="">About us</a></li>
+          <li><a href="">Join us</a></li>
+          <li><a href="">Contact us</a></li>
+        </ul>
+        <ul class="secondary">
+          <li><a></a></li>
+          
+        </ul>
+        
+      </div>
+      <h1>Hello</h1>
+    </div>
+  </div>
+  <span id="tagline"></span>
+  
+ 
+  <div id="featured">
+    {% block body %}body{% endblock %} 
+  
+         
+  </div>
+</div>
+
+<div id="footer">
+  <p>Copyright &copy; <a href="">ourTeam</p>
+</div>
+</body>
+</html>
