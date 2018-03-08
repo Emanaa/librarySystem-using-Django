@@ -12,7 +12,8 @@ def listWriters(request):
 def writerDetails(request,writer_id):
     writerDetails = writer.objects.get(pk=writer_id)
     return render(request,'writerDetails.html',{'details':writerDetails})
-
+def x(request):
+    return render(request,'writerList.html')
     #signup
 def signup(request):
     if request.method == 'POST':
@@ -23,7 +24,7 @@ def signup(request):
             raw_password = form.cleaned_data.get('users_password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('home')
+            return render(request,'writerList.html',{'userName':username})#redirect('writerList')
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})

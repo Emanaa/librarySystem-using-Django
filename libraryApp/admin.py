@@ -1,25 +1,25 @@
 from django.contrib import admin
-from .models import Writer, Book,Country
+from .models import writer, book
 # Register your models here.
 
 
 
-admin.site.register(Country)
+#admin.site.register(Country)
 
 
 
-@admin.register(Writer)
+@admin.register(writer)
 class Writerdmin(admin.ModelAdmin):
 
-    list_display = ('first_name', 'last_name', 'date_of_birth', 'date_of_death','contact','books','bio')
-    fields = ['first_name', 'last_name','date_of_birth', 'date_of_death','contact','books','bio']
+    list_display = ('writer_name', 'writer_dob', 'writer_dod','writer_contact','writer_bio')
+    fields = ['writer_name','writer_dob', 'writer_dod','writer_contact','writer_bio']
 
 
 
-@admin.register(Book)
+@admin.register(book)
 class BookAdmin(admin.ModelAdmin):
 
-    list_display = ('title', 'publishedAt','country','writer')
+    list_display = ('book_name', 'book_pubdate','book_summary')
 
 
 

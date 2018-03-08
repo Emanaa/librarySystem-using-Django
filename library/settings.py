@@ -127,4 +127,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/libraryApp/static/'
-LOGIN_REDIRECT_URL = 'writerList'
+LOGIN_REDIRECT_URL = 'x'
