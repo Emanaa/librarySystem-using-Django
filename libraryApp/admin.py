@@ -11,8 +11,8 @@ from .models import writer, book
 @admin.register(writer)
 class Writerdmin(admin.ModelAdmin):
 
-    list_display = ('writer_name', 'writer_dob', 'writer_dod','writer_contact','writer_bio')
-    fields = ['writer_name','writer_dob', 'writer_dod','writer_contact','writer_bio']
+    list_display = ('writer_name', 'writer_dob', 'writer_dod','writer_contact','writer_bio','writer_image')
+    fields = ['writer_name','writer_dob', 'writer_dod','writer_contact','writer_bio','writer_image']
 
 
 

@@ -14,8 +14,8 @@ def writerDetails(request,writer_id):
     return render(request,'writerDetails.html',{'details':writerDetails})
 
 
-def bookDetails(request,book_name):
-    bookDetails = Book.objects.get(title=book_name)
+def bookDetails(request,bookName):
+    bookDetails = book.objects.get(book_name=bookName)
     return render(request,'bookDetails.html',{'bookDetails':bookDetails})
 
 
