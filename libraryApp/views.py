@@ -12,8 +12,13 @@ def listWriters(request):
 def writerDetails(request,writer_id):
     writerDetails = writer.objects.get(pk=writer_id)
     return render(request,'writerDetails.html',{'details':writerDetails})
-def x(request):
-    return render(request,'writerList.html')
+
+
+def bookDetails(request,book_name):
+    bookDetails = Book.objects.get(title=book_name)
+    return render(request,'bookDetails.html',{'bookDetails':bookDetails})
+
+
     #signup
 def signup(request):
     if request.method == 'POST':

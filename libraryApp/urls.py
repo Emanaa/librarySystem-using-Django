@@ -11,6 +11,7 @@ app_name = 'libraryApp'
 urlpatterns = [
 	path('',views.listWriters,name='writers'),
     path('d/<int:writer_id>',views.writerDetails,name='detail'),
+	path('d/<book_name>',views.bookDetails,name='bookdetail'),
 	path('signup', views.signup, name='signup'),
 	path('login', auth_views.login, {'template_name': 'login.html'}, name='login'),
     path('logout', auth_views.logout, {'template_name': 'logged_out.html'}, name='logout'),
