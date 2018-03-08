@@ -1,8 +1,15 @@
-<h2>Writers</h2>
+{% extends "common.html"%}
+{%block body%} 
+
 <ul>
     {% for writer in writer_list %}
-    {{writer.writer_id}}
 
-        <li><a href="d/{{writer.writer_id}}">{{ writer.writer_name }}</a></li>
+    <li class="first">
+        <h2><a href="d/{{writer.writer_id}}">{{ writer.writer_name }}</a></h2>
+        <div><span></span><a href="#"></a><img src='/{{writer.writer_image}}' alt="Writer image" width=250 height="240"></a></div>
+        <a href="d/{{writer.writer_id}}" class="view"><span>View Details</span></a> 
+    </li>
     {% endfor %}
 </ul>
+{%endblock%}
+

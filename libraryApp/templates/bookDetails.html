@@ -1,0 +1,25 @@
+{% extends "common.html"%}
+{%block body%} 
+
+<div id="dDiv">
+<ul >
+
+    <li id="details">
+        <h2>{{bookDetails.book_name}}</h2>
+        <div id="spanDetails">
+        <h4>Published at {{bookDetails.book_pubdate}}</h4>
+        <h4>Summary {{bookDetails.book_summary}}</h4>
+        <h4>Country {{bookDetails.book_country}}</h4>
+        <h4>Link <a href="{{bookDetails.book_link}}">Read Book</a></h4>
+        
+</div>
+    </li>
+  
+</div> 
+
+    
+   
+</ul>
+{%endblock%}
+
+                       
