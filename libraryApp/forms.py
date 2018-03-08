@@ -14,9 +14,19 @@ class SignUpForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ('username',
+        fields = (
+        'username',
         'first_name',
         'last_name',
         'email',
         'password1',
-        'password2')
+        'password2'
+        )
+def save(self,commit=true):
+    user = super(SignUpForm,self).save(commit=False)
+    if commit
+        user.save()
+    return user
+
+#refrences https://www.youtube.com/watch?v=66l9b2QrBR8
+#refrences https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html
